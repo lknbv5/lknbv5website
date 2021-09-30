@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loading">
+        <p>
+     <i></i>
+     <i></i>
+     <i></i>
+     <i></i>
+     <i></i>
+   </p>
+   </div>
+   <style>
+       *{margin:0;padding:0;}
+    .loading{
+          height:100%;width:100%;position:fixed;background:rgba(255,255,255,0.95);
+    }
+    .loading >p{position:absolute;left:0;right:0;top:0;bottom:0;margin:auto;height:30px;width:120px;}
+    .loading >p i{display: block;float:left;margin:0 5px; width:5px;height:30px;background:#f00;transform:scaleY(0.3);
+                   animation:loading 1s ease infinite alternate;
+    }
+.loading >p i:nth-child(2){animation-delay:0.1s;}
+.loading >p i:nth-child(3){animation-delay:0.2s;}
+.loading >p i:nth-child(4){animation-delay:0.3s;}
+.loading >p i:nth-child(5){animation-delay:0.4s;}
+    @keyframes loading{
+           0,40%,100%{transform:scaleY(0.3);}
+           20%{transform:scaleY(1);}
+    }
+   </style>
+</body>
+</html>
